@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <string>
 #include <chrono>
@@ -14,7 +15,7 @@ int linear_search(vector<string> container, string element) {
     return -1;
 }
 
-int binary_search(vector<string> container, string element) {
+int binary_searchy(vector<string> container, string element) {
     int max_index = container.size() - 1;
     int min_index = 0;
     while (min_index <= max_index) {
@@ -39,7 +40,7 @@ int main() {
 
     // binary search
     start = std::chrono::system_clock::now();
-    cout << "found"<<target<<" at index; " << binary_search(getStringData(), target) << "\n";
+    cout << "found"<<target<<" at index; " << binary_searchy(getStringData(), target) << "\n";
     end = std::chrono::system_clock::now();
     std::cout<< "Time taken: " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << "ms\n";
 
@@ -52,5 +53,3 @@ int main() {
 
 
 }
-
-
